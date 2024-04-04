@@ -1,0 +1,30 @@
+body {
+  width: 300px;
+}
+
+.todo-items,
+.todo-items li {
+  margin: 0px;
+  border: solid green 2px;
+  /* list-style: none; */
+}
+.todo-items li {
+  padding: 10px;
+  border-bottom: solid gray 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.todo-items li:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+.todo-items li.done .item {
+  text-decoration: line-through;
+}
+.todo-items div span {
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.new-item{
+    display: none;
+}

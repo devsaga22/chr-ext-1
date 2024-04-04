@@ -1,0 +1,36 @@
+{   
+    "manifest_version":3,
+    "name":"todos",
+    "description":"todos list",
+    "version":"0.0.1",
+    "icons":{
+        "16": "todo_16.png",
+    
+        "128": "todo_128.png"
+
+    },
+    "options_page":"option.html",
+    "action":{
+        "default_popup":"popup.html",
+        "default_icon":{
+            "16": "todo_16.png"
+        }
+    },
+    
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*.nytimes.com/*"],
+          "js": ["content-script.js"]
+        }
+      ],
+      "permissions":[
+        "storage",
+        "alarms",
+        "notifications",
+        "contextMenus"
+      ]
+
+}
